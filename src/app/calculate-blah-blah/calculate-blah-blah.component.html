@@ -1,0 +1,84 @@
+<div class="flex flex-col align-center items-center">
+  <form class="w-full max-w-lg" (ngSubmit)="onSubmit()">
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <label
+          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          for="grid-input-initialinvestment"
+        >
+          Initial Investment
+        </label>
+        <input
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+          id="grid-input-initialinvestment"
+          type="text"
+          placeholder="0"
+          name="initialInvestment"
+          [(ngModel)]="initialInvestment"
+        />
+        <!-- <p class="text-red-500 text-xs italic">Please fill out this field.</p> -->
+      </div>
+      <div class="w-full md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          for="grid-annual-Investment"
+        >
+          Annual Investment
+        </label>
+        <input
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-annual-Investment"
+          type="text"
+          placeholder="0"
+          name="annualInvestment"
+          [(ngModel)]="annualInvestment"
+        />
+      </div>
+    </div>
+
+    <div class="flex flex-wrap -mx-3 mb-6">
+      <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+        <label
+          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          for="grid-Expected-Return"
+        >
+          Expected Return
+        </label>
+        <input
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-red-500 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+          id="grid-Expected-Return"
+          type="text"
+          placeholder="0"
+          name="expectedReturn"
+          [(ngModel)]="expectedReturn"
+        />
+      </div>
+      <div class="w-full md:w-1/2 px-3">
+        <label
+          class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
+          for="grid-Duration"
+        >
+          Duration
+        </label>
+        <input
+          class="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+          id="grid-Duration"
+          type="text"
+          placeholder="0"
+          name="duration"
+          [(ngModel)]="duration"
+        />
+      </div>
+    </div>
+    <button
+      type="submit"
+      class="bg-green-200 block w-full border-gray-200 rounded py-3 px-4"
+    >
+      Calculate
+    </button>
+  </form>
+  {{ initialInvestment }}
+  {{ annualInvestment }}
+  {{ expectedReturn }}
+  {{ duration }}
+</div>
